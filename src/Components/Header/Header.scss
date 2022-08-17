@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 50px;
+
+    &__logo {
+        font-family: "Amatic SC", cursive;
+        margin: 10px 15px;
+
+        &Link {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    &__navigation {
+        &Link {
+            margin: 0 5px;
+            padding: 10px 5px;
+            text-decoration: none;
+            color: #090909;
+            transition: color 0.2s linear;
+
+            &:hover {
+                color: #d0d0d0;
+            }
+        }
+    }
+}

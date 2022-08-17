@@ -8,7 +8,6 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.11.49",
-    "@types/node-sass": "^4.11.3",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "react": "^18.2.0",
@@ -43,6 +42,8 @@
     ]
   },
   "devDependencies": {
+    "@types/node-sass": "^4.11.3",
+    "node-sass": "^7.0.1",
     "sass": "^1.54.4"
   }
 }

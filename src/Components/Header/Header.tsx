@@ -1,20 +1,27 @@
 import { Link } from "react-router-dom";
 
-import style from "./Header.module.scss";
+import "./Header.scss";
 
 const Header = () => {
     return (
-        <div className={style.header}>
-            <h1 className={style.header__title}>ContoleMe</h1>
-            <nav className={style.header__navigation}>
-                <Link to="/Incomes" className={style.header__navigationLink}>
-                    Incomes
+        <div className="header">
+            <h1 className="header__logo">
+                <Link to="/Home" className="header__logoLink">
+                    Controle
                 </Link>
-                <Link to="/Spends" className={style.header__navigationLink}>
-                    Spends
+            </h1>
+            <nav className="header__navigation">
+                <Link to="/Incomes" className="header__navigationLink">
+                    Receitas
                 </Link>
-                <Link to="/Profit" className={style.header__navigationLink}>
-                    Profit
+                <Link to="/Spends" className="header__navigationLink">
+                    Gastos
+                </Link>
+                <Link to="/Profit" className="header__navigationLink">
+                    Lucros
+                </Link>
+                <Link to="/Configs" className="header__navigationLink">
+                    Configurações
                 </Link>
             </nav>
         </div>
