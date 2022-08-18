@@ -1,0 +1,51 @@
+.siginup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin: 0 0 15px;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    &__input {
+        width: calc(230px - 32px);
+        padding: 6px 15px;
+        border: 1px solid #505050;
+        border-radius: 3px;
+        color: #505050;
+    }
+
+    &__button {
+        width: 230px;
+        padding: 5px 10px;
+        border-radius: 3px;
+        background-color: #090909;
+        color: #f2f2f2;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__login {
+        display: block;
+        font-size: 14px;
+        color: #090909;
+        margin-top: 10px;
+        padding: 5px;
+    }
+}
