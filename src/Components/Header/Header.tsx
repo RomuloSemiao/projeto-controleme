@@ -20,9 +20,6 @@ const Header = () => {
                 <Link to="/profit" className="header__navigationLink">
                     Lucros
                 </Link>
-                <Link to="/configs" className="header__navigationLink">
-                    Configurações
-                </Link>
             </nav>
         </div>
     );
