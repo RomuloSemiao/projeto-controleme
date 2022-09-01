@@ -8,7 +8,7 @@ const Spends = () => {
     const [value, setValue] = useState("");
     const [date, setDate] = useState("");
 
-    const handleSubmitData = (e: React.SyntheticEvent<EventTarget>) => {
+    const handleSubmitDataSpends = (e: React.SyntheticEvent<EventTarget>) => {
         e.preventDefault();
 
         console.log(value);
@@ -25,7 +25,10 @@ const Spends = () => {
             <div className="spends">
                 <h2 className="spends__title">Gastos</h2>
 
-                <form className="spends__form" onSubmit={handleSubmitData}>
+                <form
+                    className="spends__form"
+                    onSubmit={handleSubmitDataSpends}
+                >
                     <input
                         id="value"
                         type="number"

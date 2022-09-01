@@ -8,7 +8,7 @@ const Incomes = () => {
     const [value, setValue] = useState("");
     const [date, setDate] = useState("");
 
-    const handleSubmitData = (e: React.SyntheticEvent<EventTarget>) => {
+    const handleSubmitDataIncomes = (e: React.SyntheticEvent<EventTarget>) => {
         e.preventDefault();
 
         console.log(value);
@@ -24,7 +24,10 @@ const Incomes = () => {
             <div className="incomes">
                 <h2 className="incomes__title">Receitas</h2>
 
-                <form className="incomes__form" onSubmit={handleSubmitData}>
+                <form
+                    className="incomes__form"
+                    onSubmit={handleSubmitDataIncomes}
+                >
                     <input
                         id="value"
                         type="number"
