@@ -1,4 +1,13 @@
 import { useState } from "react";
+import {
+    addDoc,
+    collection,
+    getDocs,
+    getFirestore,
+    query,
+    where,
+} from "firebase/firestore";
+import { app } from "../../services/firebaseConfig";
 
 import { Header } from "../Header/Header";
 
@@ -8,12 +17,31 @@ const Spends = () => {
     const [value, setValue] = useState("");
     const [date, setDate] = useState("");
 
-    const handleSubmitDataSpends = (e: React.SyntheticEvent<EventTarget>) => {
+    const db = getFirestore(app);
+
+    const returnSpendsData = async () => {
+        const spendsRef = collection(db, "spends");
+
+        const q = query(spendsRef, where("value", "!=", null));
+
+        const querySnapshot = await getDocs(q);
+
+        querySnapshot.forEach((doc) => {
+            console.log(doc.id, " => ", doc.data());
+        });
+    };
+
+    const handleSubmitDataSpends = async (
+        e: React.SyntheticEvent<EventTarget>
+    ) => {
         e.preventDefault();
 
-        console.log(value);
-        console.log(date);
+        const docRef = await addDoc(collection(db, "spends"), {
+            value: value,
+            date: date,
+        });
 
+        returnSpendsData();
         setValue("");
         setDate("");
     };
