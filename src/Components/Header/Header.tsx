@@ -22,7 +22,7 @@ const Header = () => {
                     Gastos
                 </Link>
                 <Link to="/home/profit" className="header__navigationLink">
-                    Lucros
+                    Comparativo
                 </Link>
                 <span
                     onClick={() => signOut()}

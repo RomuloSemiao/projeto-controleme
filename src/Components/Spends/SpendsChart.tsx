@@ -23,7 +23,6 @@ export const SpendsChart = () => {
         const querySnapshot: any = await getDocs(qry);
 
         querySnapshot.docs.map((item: any) => {
-            console.log("Item", item);
 
             setDateSpends((prevState: any) => [
                 ...prevState,

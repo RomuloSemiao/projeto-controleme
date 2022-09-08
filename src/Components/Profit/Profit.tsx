@@ -7,12 +7,12 @@ import {
     query,
     where,
 } from "firebase/firestore";
+import { app } from "../../services/firebaseConfig";
+
 import Plot from "react-plotly.js";
 
 import { Header } from "../Header/Header";
-import { IncomesChart } from "../Incomes/IncomesChart";
-import { SpendsChart } from "../Spends/SpendsChart";
-import { app } from "../../services/firebaseConfig";
+
 
 const Profit = () => {
     const [dateSpends, setDateSpends] = useState(Array<any>);
@@ -41,6 +41,18 @@ const Profit = () => {
                 item._document.data.value.mapValue.fields.value.stringValue,
             ]);
 
+
+        });
+    };
+
+    const fetchIncomes = async () => {
+        const response = collection(db, "incomes");
+        const qry = query(response, where("value", "!=", null));
+        const querySnapshot: any = await getDocs(qry);
+
+        querySnapshot.docs.map((item: any) => {
+            console.log("Item", item);
+
             setDateIncomes((prevState: any) => [
                 ...prevState,
                 item._document.data.value.mapValue.fields.date.stringValue,
@@ -53,14 +65,16 @@ const Profit = () => {
         });
     };
 
+
     useEffect(() => {
         return () => {
             setLoading(true);
             fetchSpends();
+            fetchIncomes();
             setLoading(false);
         };
     }, []);
-
+    
     const trace1 = {
         x: [...dateIncomes], // DATAS
         y: [...valueIncomes], // VALOR
