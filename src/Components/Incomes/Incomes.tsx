@@ -12,6 +12,7 @@ import { app } from "../../services/firebaseConfig";
 import { Header } from "../Header/Header";
 
 import "./Incomes.scss";
+import { IncomesChart } from "./IncomesChart";
 
 const Incomes = () => {
     const [value, setValue] = useState("");
@@ -20,15 +21,15 @@ const Incomes = () => {
     const db = getFirestore(app);
 
     const returnIncomesData = async () => {
-        const spendsRef = collection(db, "incomes");
+        const incomesRef = collection(db, "incomes");
 
-        const q = query(spendsRef, where("value", "!=", null));
+        const q = query(incomesRef, where("value", "!=", null));
 
         const querySnapshot = await getDocs(q);
 
-        querySnapshot.forEach((doc) => {
-            console.log(doc.id, " => ", doc.data());
-        });
+        // querySnapshot.forEach((doc) => {
+        //     console.log(doc.id, " => ", doc.data());
+        // });
     };
 
     const handleSubmitDataIncomes = async (
@@ -82,6 +83,7 @@ const Incomes = () => {
                     </button>
                 </form>
             </div>
+            <IncomesChart />
         </>
     );
 };

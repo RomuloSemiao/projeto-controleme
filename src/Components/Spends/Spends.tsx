@@ -12,6 +12,7 @@ import { app } from "../../services/firebaseConfig";
 import { Header } from "../Header/Header";
 
 import "./Spends.scss";
+import { SpendsChart } from "./SpendsChart";
 
 const Spends = () => {
     const [value, setValue] = useState("");
@@ -83,6 +84,7 @@ const Spends = () => {
                     </button>
                 </form>
             </div>
+            <SpendsChart />
         </>
     );
 };
