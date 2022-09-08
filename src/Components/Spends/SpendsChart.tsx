@@ -37,9 +37,6 @@ export const SpendsChart = () => {
         });
     };
 
-    console.log("Date", dateSpends);
-    console.log("Value", valueSpends);
-
     useEffect(() => {
         return () => {
             setLoading(true);
@@ -59,7 +56,7 @@ export const SpendsChart = () => {
                             x: [...dateSpends], // DATAS
                             y: [...valueSpends], // VALOR
                             type: "bar",
-                            marker: { color: "black" },
+                            marker: { color: "gray" },
                         },
                     ]}
                     layout={{
