@@ -29,7 +29,6 @@ const Profit = () => {
         const querySnapshot: any = await getDocs(qry);
 
         querySnapshot.docs.map((item: any) => {
-            console.log("Item", item);
 
             setDateSpends((prevState: any) => [
                 ...prevState,
@@ -51,7 +50,6 @@ const Profit = () => {
         const querySnapshot: any = await getDocs(qry);
 
         querySnapshot.docs.map((item: any) => {
-            console.log("Item", item);
 
             setDateIncomes((prevState: any) => [
                 ...prevState,
@@ -94,7 +92,6 @@ const Profit = () => {
     const data: any = [trace1, trace2];
 
     const layout: any = {
-        title: "Lucros",
         barmode: "group",
     };
 

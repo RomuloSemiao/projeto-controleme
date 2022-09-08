@@ -23,7 +23,6 @@ export const IncomesChart = () => {
         const querySnapshot: any = await getDocs(qry);
 
         querySnapshot.docs.map((item: any) => {
-            console.log("Item", item);
 
             setDateIncomes((prevState: any) => [
                 ...prevState,
@@ -36,9 +35,6 @@ export const IncomesChart = () => {
             ]);
         });
     };
-
-    console.log("Date", dateIncomes);
-    console.log("Value", valueIncomes);
 
     useEffect(() => {
         return () => {
