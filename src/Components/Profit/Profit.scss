@@ -1,0 +1,9 @@
+.profit{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__title{
+        margin: 1rem 0 2rem;
+    }
+}

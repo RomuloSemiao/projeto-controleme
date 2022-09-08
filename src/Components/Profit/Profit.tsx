@@ -11,6 +11,8 @@ import { app } from "../../services/firebaseConfig";
 
 import Plot from "react-plotly.js";
 
+import "./Profit.scss";
+
 import { Header } from "../Header/Header";
 
 
@@ -102,6 +104,7 @@ const Profit = () => {
                 <>...Carregando</>
             ) : (
                 <div>
+                    <h2 className="profit__title">Comparativo</h2>
                     <Plot data={data} layout={layout} />
                 </div>
             )}

@@ -20,6 +20,13 @@ const Spends = () => {
 
     const db = getFirestore(app);
 
+    const returnSpendsData = async () => {
+        const spendsRef = collection(db, "spends");
+
+        const q = query(spendsRef, where("value", "!=", null));
+
+        const querySnapshot = await getDocs(q);
+    };
 
     const handleSubmitDataSpends = async (
         e: React.SyntheticEvent<EventTarget>
@@ -31,6 +38,7 @@ const Spends = () => {
             date: date,
         });
 
+        returnSpendsData();
         setValue("");
         setDate("");
     };

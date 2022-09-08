@@ -1,12 +1,10 @@
 .incomes {
-    height: 250px;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 
     &__title {
-        margin: 0 0 3rem;
+        margin: 1rem 0 2rem;
     }
 
     &__form {
