@@ -45,7 +45,7 @@ export const AuthGoogleProvider = ({ children }: any) => {
             });
     };
 
-    function signOut() {
+    const signOut = () => {
         sessionStorage.clear();
         setUser("");
 

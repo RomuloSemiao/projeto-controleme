@@ -75,7 +75,7 @@ const Incomes = () => {
                         required
                     />
 
-                    <button type="submit" onClick={() => {}}>
+                    <button type="submit" >
                         enviar
                     </button>
                 </form>

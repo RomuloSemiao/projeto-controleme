@@ -21,7 +21,6 @@ const Profit = () => {
     const [valueSpends, setValueSpends] = useState(Array<any>);
     const [dateIncomes, setDateIncomes] = useState(Array<any>);
     const [valueIncomes, setValueIncomes] = useState(Array<any>);
-    const [loading, setLoading] = useState(false);
 
     const db = getFirestore(app);
 
@@ -68,10 +67,8 @@ const Profit = () => {
 
     useEffect(() => {
         return () => {
-            setLoading(true);
             fetchSpends();
             fetchIncomes();
-            setLoading(false);
         };
     }, []);
     
@@ -100,14 +97,10 @@ const Profit = () => {
     return (
         <>
             <Header />
-            {loading ? (
-                <>...Carregando</>
-            ) : (
-                <div>
-                    <h2 className="profit__title">Comparativo</h2>
-                    <Plot data={data} layout={layout} />
-                </div>
-            )}
+            <div>
+                <h2 className="profit__title">Comparativo</h2>
+                <Plot data={data} layout={layout} />
+            </div>
         </>
     );
 };

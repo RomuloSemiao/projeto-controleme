@@ -8,6 +8,6 @@ const firebaseConfig = {
     messagingSenderId: "484102854090",
     appId: "1:484102854090:web:15b6979d54db1c65b82b33",
     measurementId: "G-P8YKDVR462",
-};
+}; //Chaves da Aplicação
 
 export const app = initializeApp(firebaseConfig);

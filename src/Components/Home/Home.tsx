@@ -12,11 +12,11 @@ const Home = () => {
 
                 <ul className="home__description">
                     <li>
-                        Acesse o item Receitas para consultar as suas Receitas,
+                        Acesse o item <b>Receitas</b> para consultar as suas Receitas,
                     </li>
-                    <li>o item Gastos para acessar os Gastos,</li>
-                    <li>o item Lucros para consultar os seus Lucros,</li>
-                    <li>e o item Sair para sair da sua conta!</li>
+                    <li>o item <b>Gastos</b> para acessar os Gastos,</li>
+                    <li>o item <b>Comparativo</b> para consultar a comparação dos dados,</li>
+                    <li>e o item <b>Sair</b> para sair da sua conta!</li>
                 </ul>
             </div>
         </>
